@@ -1,11 +1,11 @@
 .container {
-    width: 4.4%;
+    width: 64px;
     transition: 0.7s;
     height: 100vh;
     background-color: #1a1a27;
 }
 .container:hover {
-    width: 15%;
+    width: 206px;
     color: #1a1a27;
 }
 .app-icon{
@@ -15,16 +15,15 @@
 }
 i{
     font-size: 20px;
-    color: white;
+    color: #afafaf;
     padding: 23px;
 }
 .single-menu{
     cursor: pointer;
     position: sticky;
-    width: 400px;
+    width: 206px;
 }
 .container:hover .single-menu:hover span{
     color: blue !important;
    
- 
 }

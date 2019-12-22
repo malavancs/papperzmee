@@ -4,9 +4,9 @@
     
     </div>
 
-    <div *ngFor="let i of options" class="single-menu">
+    <div *ngFor="let i of options" (click)="navigate(i)" class="single-menu">
             <i [class]="i.class"></i>
-            <span style="color: white;">{{i.text}}</span>
+            <span style="color: #e4e4e4;">{{i.text}}</span>
         </div>
     
 </div>

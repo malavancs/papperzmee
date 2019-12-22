@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
   options;
   initializeUser() {
     this.options = [{
@@ -24,19 +25,31 @@ export class NavBarComponent implements OnInit {
   initializeAdmin() {
     this.options = [{
       class: 'fa fa-dashboard',
-      text: 'Dashboard'
+      text: 'Dashboard',
+      path: 'admin/dashboard'
     }, {
       class: 'fa fa-camera',
-      text: 'Photographers'
+      text: 'Photographers',
+      path: 'admin/photographer'
     }, {
       class: 'fa fa-address-book-o',
-      text: 'Subscribers'
-    }];
+      text: 'Subscribers',
+      path: 'admin/subscriber'
+    },
+    {
+      class: 'fas fa-cog',
+      text: 'Settings'
+    }
+  ];
   }
   ngOnInit() {
 
     this.initializeAdmin();
 
+  }
+  navigate(option) {
+    this.router.navigateByUrl(option.path);
+    console.log(option);
   }
 
 }
