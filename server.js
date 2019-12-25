@@ -15,6 +15,7 @@ fs.readdir(__dirname+"/"+"dist/paparazzme-UI", (err, files) => {
   files.forEach(file => {
     console.log(file);
   });
+  console.log(process.cwd());
 });
 res.sendFile('app/dist/papperzmee-UI/index.html');
 });
