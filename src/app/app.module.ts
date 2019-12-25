@@ -8,6 +8,7 @@ import { NavHeaderComponent } from './nav-header/nav-header.component';
 import { PhotographerListingComponent } from './photographer-listing/photographer-listing.component';
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { SubscriberAdminComponent } from './subscriber-admin/subscriber-admin.component';
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SubscriberAdminComponent } from './subscriber-admin/subscriber-admin.co
     NavHeaderComponent,
     PhotographerListingComponent,
     DashboardAdminComponent,
-    SubscriberAdminComponent
+    SubscriberAdminComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
