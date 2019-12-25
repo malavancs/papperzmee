@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router: Router) { }
   options;
   initializeUser() {
     this.options = [{
@@ -23,6 +23,7 @@ export class NavBarComponent implements OnInit {
     }];
   }
   initializeAdmin() {
+    this.FireEvent('hey','hover');
     this.options = [{
       class: 'fa fa-dashboard',
       text: 'Dashboard',
@@ -53,7 +54,7 @@ export class NavBarComponent implements OnInit {
       class: 'fas fa-cog',
       text: 'Settings'
     }
-  ];
+    ];
   }
   ngOnInit() {
 
@@ -61,9 +62,21 @@ export class NavBarComponent implements OnInit {
 
   }
   navigate(path) {
-    if(path!=='')
-    this.router.navigateByUrl(path);
+    if (path !== '')
+      this.router.navigateByUrl(path);
     console.log(path);
   }
+  FireEvent(ElementId, EventName) {
+    console.log("Comes here",1);
 
+    if (document.getElementById(ElementId) != null) {
+      console.log("Comes here",2);
+
+      {
+        var evObj = document.createEvent('Events');
+        evObj.initEvent(EventName, true, false);
+        document.getElementById(ElementId).dispatchEvent(evObj);
+      }
+    }
+  }
 }

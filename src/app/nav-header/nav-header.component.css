@@ -2,4 +2,6 @@
     width: -webkit-fill-available;
     height: 64px;
     background: white;
+    border-bottom: 1px solid #cecece;
+
 }

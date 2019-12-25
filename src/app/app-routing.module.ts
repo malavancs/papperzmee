@@ -15,10 +15,12 @@ const routes: Routes = [{
 },{
   path:'admin/subscriber',
   component: SubscriberAdminComponent
-},{
-  path: '',
-  component: MainPageComponent
-}];
+},
+// {
+//   path: '',
+//   component: MainPageComponent
+// }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

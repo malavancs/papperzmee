@@ -1,10 +1,10 @@
-.container {
+.container-1 {
     width: 70px;
     transition: 0.7s;
     height: 100vh;
     background-color: #1e1e2e
 }
-.container:hover {
+.container-1:hover {
     max-width: 265px;
     width: 265px;
     background-color: #1e1e2e
@@ -23,12 +23,12 @@
 .app-icon i {
     padding: 28px;
 }
-.container:hover .app-icon span {
+.container-1:hover .app-icon span {
     display: block;
     color: white;
 }
 
-.container:hover .app-icon i {
+.container-1:hover .app-icon i {
     padding: 0;
 }
 i{
@@ -44,21 +44,21 @@ i{
     min-height: 35px;
     padding: 9px 25px;
 }
-.container:hover .single-menu:hover i{
+.container-1:hover .single-menu:hover i{
     color: #5d78ff !important;
    
 }
 .sub-menu{
     display: none;
 }
-.container:hover .sub-menu {
+.container-1:hover .sub-menu {
     display: flex;   
 }
-.container:hover .single-menu:hover span{
+.container-1:hover .single-menu:hover span{
     color: white !important;
    background: #1a1a27;
 }
-.container:hover .single-menu div span{
+.container-1:hover .single-menu div span{
 display: block;
 }
 .single-menu div span{

@@ -9,7 +9,9 @@ import { PhotographerListingComponent } from './photographer-listing/photographe
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { SubscriberAdminComponent } from './subscriber-admin/subscriber-admin.component';
 import { MainPageComponent } from './main-page/main-page.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DataTableModule} from "angular-6-datatable";
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,10 @@ import { MainPageComponent } from './main-page/main-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    DataTableModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
