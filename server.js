@@ -16,7 +16,7 @@ fs.readdir(__dirname+"/"+"dist/paparazzme-UI", (err, files) => {
     console.log(file);
   });
 });
-res.sendFile(path.join(__dirname,'/dist/papperzmee-UI/index.html'));
+res.sendFile('app/dist/papperzmee-UI/index.html');
 });
 
 // Start the app by listening on the default Heroku port
