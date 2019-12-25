@@ -21,4 +21,4 @@ res.sendFile(process.cwd()+'/dist/paparazzme-UI/index.html');
 });
 
 // Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 9000);
+app.listen(process.env.PORT);
