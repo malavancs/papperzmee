@@ -26,7 +26,20 @@ export class NavBarComponent implements OnInit {
     this.options = [{
       class: 'fa fa-dashboard',
       text: 'Dashboard',
-      path: 'admin/dashboard'
+      path: '',
+      submenu: [
+        {
+          class: 'fa fa-user',
+          text: 'User',
+          path: 'admin/subscriber'
+        },
+        {
+          class: 'fa fa-camera',
+          text: 'Photographer',
+          path: 'admin/photographer'
+
+        }
+      ]
     }, {
       class: 'fa fa-camera',
       text: 'Photographers',
@@ -47,9 +60,10 @@ export class NavBarComponent implements OnInit {
     this.initializeAdmin();
 
   }
-  navigate(option) {
-    this.router.navigateByUrl(option.path);
-    console.log(option);
+  navigate(path) {
+    if(path!=='')
+    this.router.navigateByUrl(path);
+    console.log(path);
   }
 
 }

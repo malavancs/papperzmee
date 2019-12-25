@@ -1,29 +1,71 @@
 .container {
-    width: 64px;
+    width: 70px;
     transition: 0.7s;
     height: 100vh;
-    background-color: #1a1a27;
+    background-color: #1e1e2e
 }
 .container:hover {
-    width: 206px;
-    color: #1a1a27;
+    max-width: 265px;
+    width: 265px;
+    background-color: #1e1e2e
 }
 .app-icon{
-    width: -webkit-fill-available;
-    padding: 21px;
     cursor: pointer;
+    text-align: center;
+    height: 65px;
+    background: #1a1a27;
+    margin-bottom: 15px;
+    
+}
+.app-icon span {
+    display: none;
+}
+.app-icon i {
+    padding: 28px;
+}
+.container:hover .app-icon span {
+    display: block;
+    color: white;
+}
+
+.container:hover .app-icon i {
+    padding: 0;
 }
 i{
-    font-size: 20px;
-    color: #afafaf;
-    padding: 23px;
+    font-size: 13px;
+    color: #434d6b;
 }
 .single-menu{
     cursor: pointer;
+    position: -webkit-sticky;
     position: sticky;
-    width: 206px;
+    display: flex;
+    max-width: 265px;
+    min-height: 35px;
+    padding: 9px 25px;
 }
-.container:hover .single-menu:hover span{
-    color: blue !important;
+.container:hover .single-menu:hover i{
+    color: #5d78ff !important;
    
 }
+.sub-menu{
+    display: none;
+}
+.container:hover .sub-menu {
+    display: flex;   
+}
+.container:hover .single-menu:hover span{
+    color: white !important;
+   background: #1a1a27;
+}
+.container:hover .single-menu div span{
+display: block;
+}
+.single-menu div span{
+    display: none;
+    }
+.single-menu:hover {
+   
+   background: #1a1a27;
+}
+
