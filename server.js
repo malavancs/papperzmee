@@ -11,7 +11,7 @@ app.use(express.static('./dist/papperzmee-UI'));
 app.get('/*', function(req,res) {
     const fs = require('fs');
 
-fs.readdir(__dirname+"/"+"dist", (err, files) => {
+fs.readdir(__dirname+"/"+"dist/paparazzme-UI", (err, files) => {
   files.forEach(file => {
     console.log(file);
   });
