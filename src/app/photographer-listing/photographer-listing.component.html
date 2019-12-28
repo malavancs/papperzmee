@@ -1,10 +1,10 @@
 <div class="container-1">
     <div class="title">
-        User management
+        Photographer Management
     </div>
     <div class="content">
         <div class="add-new-user">
-            <div class="user-title">User</div>
+            <div class="user-title">Photographers</div>
         </div>
         <div class="search-box">
             <div class="searchbox">
@@ -29,7 +29,7 @@
                                 <mfDefaultSorter by="phone">Mobile no.</mfDefaultSorter>
                             </th>
                             <th style="width: 20%">
-                                <mfDefaultSorter by="address">Address</mfDefaultSorter>
+                                <mfDefaultSorter by="address">Category</mfDefaultSorter>
                             </th>
 
                             <th style="width:10%">
@@ -41,13 +41,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let item of mf.data">
+                        <tr *ngFor="let item of mf.data; let i = index;">
                             <td>{{item.id}}</td>
                             <td>{{item.name}}</td>
-
                             <td>{{item.phone}}</td>
-                            <td>{{item.address}}</td>
-                            <td><i class="fa fa-edit"></i></td>
+                            <td>{{item.type}}</td>
+                            <td (click)="viewdetails(item,i)"><i style="cursor: pointer;" class="fa fa-edit"></i></td>
                             <td class="text-right">{{item.status}}</td>
                         </tr>
                     </tbody>

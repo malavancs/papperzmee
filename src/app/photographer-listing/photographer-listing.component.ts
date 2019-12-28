@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PhotographerService } from '../service/photographer.service';
+import { DataServiceService } from '../data-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-photographer-listing',
@@ -8,7 +10,7 @@ import { PhotographerService } from '../service/photographer.service';
 })
 export class PhotographerListingComponent implements OnInit {
 data;
-  constructor(private photo: PhotographerService) {
+  constructor(private photo: PhotographerService,private serviceData: DataServiceService,private route: Router) {
 
    }
 
@@ -18,6 +20,10 @@ data;
       console.log(res);
       this.data = res;
     });
+  }
+  viewdetails(item,index) {
+    this.serviceData.changeMessage(item);
+    this.route.navigate(['admin/view/photographer']);
   }
 
 }

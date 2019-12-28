@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,8 +11,11 @@ import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.compo
 import { SubscriberAdminComponent } from './subscriber-admin/subscriber-admin.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DataTableModule} from "angular-6-datatable";
+import {DataTableModule} from 'angular-6-datatable';
 import { HttpClientModule } from '@angular/common/http';
+import { ViewPhotographerComponent } from './view-photographer/view-photographer.component';
+import { ViewSubscriberComponent } from './view-subscriber/view-subscriber.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,14 +24,17 @@ import { HttpClientModule } from '@angular/common/http';
     PhotographerListingComponent,
     DashboardAdminComponent,
     SubscriberAdminComponent,
-    MainPageComponent
+    MainPageComponent,
+    ViewPhotographerComponent,
+    ViewSubscriberComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DataTableModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

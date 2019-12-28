@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavBarComponent implements OnInit {
 
+  isExpand = false;
   constructor(private router: Router) { }
   options;
   initializeUser() {
@@ -23,9 +24,8 @@ export class NavBarComponent implements OnInit {
     }];
   }
   initializeAdmin() {
-    this.FireEvent('hey','hover');
     this.options = [{
-      class: 'fa fa-dashboard',
+      class: 'fa fa-tachometer',
       text: 'Dashboard',
       path: '',
       submenu: [
@@ -61,22 +61,18 @@ export class NavBarComponent implements OnInit {
     this.initializeAdmin();
 
   }
-  navigate(path) {
-    if (path !== '')
+  navigate(path,indexMalavan,allow) {
+    if (path !== '') {
       this.router.navigateByUrl(path);
-    console.log(path);
-  }
-  FireEvent(ElementId, EventName) {
-    console.log("Comes here",1);
-
-    if (document.getElementById(ElementId) != null) {
-      console.log("Comes here",2);
-
-      {
-        var evObj = document.createEvent('Events');
-        evObj.initEvent(EventName, true, false);
-        document.getElementById(ElementId).dispatchEvent(evObj);
-      }
+    } 
+    if(allow){
+      this.options[indexMalavan].show = !this.options[indexMalavan].show;
+      this.isExpand = true;
+    } else {
+      setTimeout(() => {
+        this.isExpand = false;
+      }, 100);
     }
   }
+
 }

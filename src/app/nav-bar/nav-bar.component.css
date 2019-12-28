@@ -5,32 +5,25 @@
     background-color: #1e1e2e
 }
 .container-1:hover {
-    max-width: 265px;
-    width: 265px;
     background-color: #1e1e2e
 }
 .app-icon{
     cursor: pointer;
-    text-align: center;
     height: 65px;
+    display: flex;
+    flex-direction: row;
     background: #1a1a27;
     margin-bottom: 15px;
     
 }
-.app-icon span {
-    display: none;
-}
+
 .app-icon i {
     padding: 28px;
-}
-.container-1:hover .app-icon span {
-    display: block;
     color: white;
 }
 
-.container-1:hover .app-icon i {
-    padding: 0;
-}
+
+
 i{
     font-size: 13px;
     color: #434d6b;
@@ -48,22 +41,12 @@ i{
     color: #5d78ff !important;
    
 }
-.sub-menu{
-    display: none;
-}
-.container-1:hover .sub-menu {
-    display: flex;   
-}
+
 .container-1:hover .single-menu:hover span{
     color: white !important;
    background: #1a1a27;
 }
-.container-1:hover .single-menu div span{
-display: block;
-}
-.single-menu div span{
-    display: none;
-    }
+
 .single-menu:hover {
    
    background: #1a1a27;

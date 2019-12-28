@@ -4,22 +4,32 @@ import { PhotographerListingComponent } from './photographer-listing/photographe
 import { DashboardAdminComponent } from './dashboard-admin/dashboard-admin.component';
 import { SubscriberAdminComponent } from './subscriber-admin/subscriber-admin.component';
 import { MainPageComponent } from './main-page/main-page.component';
+import { ViewPhotographerComponent } from './view-photographer/view-photographer.component';
 
 
 const routes: Routes = [{
   path: 'admin/photographer',
   component: PhotographerListingComponent
-},{
+}, {
   path: 'admin/dashboard',
   component: DashboardAdminComponent
-},{
-  path:'admin/subscriber',
+}, {
+  path: 'admin/subscriber',
   component: SubscriberAdminComponent
 },
-// {
-//   path: '',
-//   component: MainPageComponent
-// }
+{
+  path: 'admin/view/photographer',
+  component: ViewPhotographerComponent
+},
+{
+  path: 'admin/view/subscriber',
+  component: ViewPhotographerComponent
+
+}
+  // {
+  //   path: '',
+  //   component: MainPageComponent
+  // }
 ];
 
 @NgModule({

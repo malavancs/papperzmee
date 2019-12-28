@@ -1,0 +1,170 @@
+<div class="view-grapher">
+    <div class="header-bar">
+        <div>View Photographer</div>
+        <div><button class="save-button"> Save </button></div>
+    </div>
+    <div style="padding: 15px;">
+        <div class="sliding-header">
+
+            <div (click)="currentTab = tabs.basic"
+                [ngClass]="{'selected':currentTab === tabs.basic,'unselected': currentTab !== tabs.basic}">
+                <i class="fa fa-user"></i> Basic Details
+            </div>
+            <div (click)="currentTab = tabs.address"
+                [ngClass]="{'selected':currentTab === tabs.address,'unselected': currentTab !== tabs.address}">
+                <i class="fa fa-address-book"></i> User address
+            </div>
+            <div (click)="currentTab = tabs.professional_details"
+                [ngClass]="{'selected':currentTab === tabs.professional_details,'unselected': currentTab !== tabs.professional_details}">
+                <i class="fa fa-camera"></i> Professional Details
+            </div>
+            
+        </div>
+    </div>
+    <div>
+        <div class="basic-d" *ngIf="currentTab === tabs.basic">
+                <div class="align-aorder"> 
+                    <div class="group-text">
+                    <img class="img-main" src="https://lh3.googleusercontent.com/-NOWffjH8DEg/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rcyivdSyNoeDrUGJzsiy7jDTuUUjw.CMID/s32-c/photo.jpg">
+                </div>
+                <div class="group-text">
+                        <div class="bref">{{message.briefBio}}</div>
+                    </div>
+                <!-- <img [src]="message.profilePicture">  -->
+                </div>
+            <div class="align-aorder">
+                <div class="group-text">
+                    <div style="    font-size: 12px;">Name</div>
+                    <input [ngModel]="message.name">
+                </div>
+                <div class="group-text">
+                        <div style="    font-size: 12px;">Age</div>
+                    <input [ngModel]="message.age">
+                </div>
+                <div class="group-text">
+                        <div style="font-size: 12px;">Phone Number</div>
+                    <input [ngModel]="message.phone">
+                </div>
+            </div>
+            <div class="align-aorder"> 
+                    <div class="group-text">
+                            <div style="    font-size: 12px;">Category</div>
+                            <input [ngModel]="message.type">
+                        </div>
+                        <div class="group-text">
+                                <div style="    font-size: 12px;">Payment Method</div>
+                            <input [ngModel]="message.paymentMethod">
+                        </div>
+                        <div class="group-text">
+                                <div style="font-size: 12px;">User rating</div>
+                            <input [ngModel]="message.userRating">
+                        </div>    
+            </div>
+           
+        </div>
+        <div class="basic-d" *ngIf="currentTab === tabs.address">
+                <div class="align-aorder">
+                    <div class="group-text">
+                        <div style="    font-size: 12px;">House no.</div>
+                        <input [ngModel]="message.billingAddress.houseNo">
+                    </div>
+                    <div class="group-text">
+                            <div style="    font-size: 12px;">Street</div>
+                        <input [ngModel]="message.billingAddress.street">
+                    </div>
+                    <div class="group-text">
+                            <div style="font-size: 12px;">City</div>
+                        <input [ngModel]="message.billingAddress.city">
+                    </div>
+                </div>
+                <div class="align-aorder"> 
+                        <div class="group-text">
+                                <div style="    font-size: 12px;">Postal Code</div>
+                                <input [ngModel]="message.billingAddress.postalCode">
+                            </div>
+                            <div class="group-text">
+                                    <div style="    font-size: 12px;">State</div>
+                                <input [ngModel]="message.billingAddress.state">
+                            </div>
+                            <div class="group-text">
+                                    <div style="    font-size: 12px;">View on map</div>
+                                    <button> Click here to open map </button>
+                            </div>
+                             
+                </div>
+              
+            </div>
+            <div class="basic-d" *ngIf="currentTab === tabs.professional_details">
+                    <div class="align-aorder">
+                        <div class="group-text">
+                            <div style="    font-size: 12px;">Category</div>
+                            <input [ngModel]="message.type">
+                        </div>
+                        <div class="group-text">
+                                <div style="    font-size: 12px;">Expertise Level</div>
+                            <input [ngModel]="message.expertiseLevel">
+                        </div>
+                        <div class="group-text">
+                                <div style="font-size: 12px;">Equiment Level</div>
+                            <input [ngModel]="message.equipmentLevel">
+                        </div>
+                    </div>
+                    <div class="align-aorder"> 
+                            <div class="group-text">
+                                    <div style="    font-size: 12px;">Payment Method</div>
+                                    <input [ngModel]="message.paymentMethod">
+                                </div>
+                                <div class="group-text">
+                                        <div style="    font-size: 12px;">Service Provided</div>
+                                    <input [ngModel]="message.usersServiced">
+                                </div>
+                                <div class="group-text">
+                                        <div style="    font-size: 12px;">Rate per {{message.rate.per}}</div>
+                                    <input [ngModel]="message.rate.value">
+                                </div>
+                                 
+                    </div>
+                    <div style="color: black;
+                    padding-top: 22px;">Services Provided </div>
+                    <div style="padding-top: 8px !important;" class="align-aorder"> 
+                            <div class="group-text">
+                                   <i class="fa fa-check-square" [ngStyle]="{'color':message.lightingOption ? 'green' : 'red'}" ></i> Lighting Option
+                                </div>
+                                <div class="group-text">
+                                        <i class="fa fa-check-square" [ngStyle]="{'color':message.greenScreen ? 'green' : 'red'}"></i> greenScreen
+                                </div>
+                                <div class="group-text">
+                                        <i class="fa fa-check-square" [ngStyle]="{'color':message.postShootRetouchEdit ? 'green' : 'red'}"></i> postShootRetouchEdit
+                                </div>
+                                 
+                    </div>
+                    <div style="padding-top: 8px !important;" class="align-aorder"> 
+                            <div class="group-text">
+                                   <i class="fa fa-check-square" [ngStyle]="{'color':message.droneAerialShoot ? 'green' : 'red'}"></i> droneAerialShoot
+                                </div>
+                                <div class="group-text">
+                                        <i class="fa fa-check-square" [ngStyle]="{'color':message.animationCreation ? 'green' : 'red'}"></i> animationCreation
+                                </div>
+                                <div class="group-text">
+                                        <i class="fa fa-check-square" [ngStyle]="{'color':message.music ? 'green' : 'red'}"></i> music
+                                </div>
+                                 
+                    </div>
+                    <div style="padding-top: 8px !important;" class="align-aorder"> 
+                            <div class="group-text">
+                                   <i class="fa fa-check-square" [ngStyle]="{'color':message.voiceOver ? 'green' : 'red'}"></i> voiceOver
+                                </div>
+                                <div class="group-text">
+                                        <i class="fa fa-check-square" [ngStyle]="{'color':message.soundEffect ? 'green' : 'red'}"></i> soundEffect
+                                </div>
+                                <div class="group-text">
+                                        <i class="fa fa-check-square" [ngStyle]="{'color':message.specialEffectFilter ? 'green' : 'red'}"></i> specialEffectFilter
+                                </div>
+                                 
+                    </div>
+                  
+                </div>
+        
+    </div>
+
+</div>
